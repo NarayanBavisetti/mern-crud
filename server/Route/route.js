@@ -1,8 +1,7 @@
 import express from "express"
+import { getUsers } from "../Controller/user-controller";
 const route = express.Router();
 
-route.get("/", (req, res) => {
-  res.status(200).json("Hi naru");
-});
+route.get("/", getUsers());
 
 export default route;

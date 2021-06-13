@@ -11,7 +11,7 @@ const app = express();
 
   app.use("/users",route)
 const PORT = 8080;
-const URL = "mongodb://narayan:ashabala@mern-crud-shard-00-00.nmch8.mongodb.net:27017,mern-crud-shard-00-01.nmch8.mongodb.net:27017,mern-crud-shard-00-02.nmch8.mongodb.net:27017/PROJECT 0?ssl=true&replicaSet=atlas-rdl4r9-shard-0&authSource=admin&retryWrites=true&w=majority"
+const URL = "mongodb://narayan:ashabala@mern-crud-shard-00-00.nmch8.mongodb.net:27017,mern-crud-shard-00-01.nmch8.mongodb.net:27017,mern-crud-shard-00-02.nmch8.mongodb.net:27017/PROJECT0?ssl=true&replicaSet=atlas-rdl4r9-shard-0&authSource=admin&retryWrites=true&w=majority"
 
 
 
