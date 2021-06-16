@@ -5,7 +5,7 @@ import login from "./login"
 import signup from "./signup"
 import List from "./list"
 import Create from "./create"
-import edit from "./edit"
+import Edit from "./edit";
 
 function Main() {
   return (
@@ -14,7 +14,7 @@ function Main() {
       <Route exact path="/" component={login} />
       <Route exact path="/signup" component={signup} />
       <Route exact path="/add" component={Create} />
-      <Route exact path="/edit/:id" component={edit} />
+      <Route exact path="/edit/:id" component={Edit} />
       <Route exact path="/list" component={List} />
     </Router>
   );

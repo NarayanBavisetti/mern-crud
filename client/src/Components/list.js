@@ -57,8 +57,8 @@ import {
             {user &&
               user.map((item) => {
                 return (
-                  <TableRow>
-                    <TableCell>{item.id}</TableCell>
+                  <TableRow key={item._id}>
+                    <TableCell>{item._id}</TableCell>
                     <TableCell>{item.name}</TableCell>
                     <TableCell>{item.email}</TableCell>
                     <TableCell>{item.phone}</TableCell>
@@ -68,7 +68,7 @@ import {
                         variant="contained"
                         color="primary"
                         component={Link}
-                        to={`/edit/${item.id}`}
+                        to={`/edit/${item._id}`}
                       >
                         Edit
                       </Button>
@@ -77,7 +77,7 @@ import {
                       <Button
                         variant="contained"
                         color="secondary"
-                        onClick={() => deleteUser(item.id)}
+                        onClick={() => deleteUser(item._id)}
                       >
                         Delete
                       </Button>

@@ -1,11 +1,16 @@
- import  mongoose  from "mongoose";
+import mongoose from "mongoose";
+import autoIncrement from "mongoose-auto-increment";
 
- const userSchema = mongoose.Schema({
-     name:String,
-     email:String,
-     phone:Number,
- })
 
- const user = mongoose.model('user',userSchema);
 
- export default user;
+const userSchema = mongoose.Schema({
+  name: String,
+  email: String,
+  phone: Number,
+});
+
+autoIncrement.initialize(mongoose.connection);
+userSchema.plugin(autoIncrement.plugin, "user");
+const User = mongoose.model("user", userSchema);
+
+export default User;

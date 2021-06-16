@@ -9,7 +9,7 @@ import {
   } from "@material-ui/core";
   import React, { useState } from "react";
   import { useHistory } from "react-router";
-//   import { addUsers } from "./Service/api";
+  import { addUsers } from "../Services/api";
   
   const useStyles = makeStyles({
     table: {
@@ -33,7 +33,7 @@ import {
   
     const onSubmit = async (e) => {
       // e.preventDefault();
-    //   await addUsers(user);
+      await addUsers(user);
       history.push("/list");
     };
   
@@ -48,15 +48,15 @@ import {
         <Typography variant="h4">Add Users</Typography>
         <FormControl>
           <InputLabel>Name</InputLabel>
-          <Input onChange={(e) => handleChange(e)} name="name" value={name} />
+          <Input onChange={(e) => handleChange(e)} name="name" type="text" value={name} />
         </FormControl>
         <FormControl>
           <InputLabel>E-mail</InputLabel>
-          <Input onChange={(e) => handleChange(e)} name="email" value={email} />
+          <Input onChange={(e) => handleChange(e)} name="email" type="email" value={email} />
         </FormControl>
         <FormControl>
           <InputLabel>Phone no.</InputLabel>
-          <Input onChange={(e) => handleChange(e)} name="phone" value={phone} />
+          <Input onChange={(e) => handleChange(e)} name="phone" type="number" value={phone} />
         </FormControl>
         <Button onClick={() => onSubmit()} variant="contained" color="primary">
           Add User
